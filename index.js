@@ -8,8 +8,11 @@ require("./db.connect")
 app.use(express.json())
 app.use(express.static("./public"))
 app.use("/public", express.static("./public"))
+
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: "https://fashi-master-backend.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
 }));
 
 app.use("/api", mainRoute)
