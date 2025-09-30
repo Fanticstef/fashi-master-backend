@@ -8,7 +8,7 @@ require("./db.connect")
 app.use(express.json())
 
 app.use(cors({
-    origin: "https://fashi-master-backend.vercel.app/",
+    origin: ["https://fashi-master.vercel.app", "https://fashi-master-backend.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
